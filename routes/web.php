@@ -21,3 +21,5 @@ Route::get('/sign',[Pengontrol::class,'sign']);
 
 
 Route::post('/login',[Pengontrol::class,'fn_login']);
+Route::post('/sign',[Pengontrol::class,'fn_sign']);
+

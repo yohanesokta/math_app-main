@@ -16,10 +16,10 @@
                 <p>Sign</p>
             </div>
             <div class="container-form-login">
-                <form action="#" method="GET">
+                <form action="/sign" method="POST">
                     @csrf
-                    <input type="text" name="usrEmail" placeholder="email" required>
-                    <label for="usrName"><i class="fa-solid fa-envelope"></i></label>
+                    <input type="text" name="usrName" placeholder="username" required value="{{ $usrName ?? '' }}">
+                    <label for="usrName"><i class="fa-solid fa-user"></i></label>
                     <input type="password" name="usrPW" placeholder="password" required>
                     <label for="usrName"><i class="fa-solid fa-lock"></i></label>
                     <input type="password" name="usrPW2" placeholder="confirm password" required>
@@ -34,5 +34,11 @@
             </div>
         </div>
     </div>
+    @if ($info ?? false)
+    <div class="info @if($infoType == 'message') infomessage @endif">
+        <p>{{ $infoMessage ?? 'error validation' }}</p>
+     </div>
+    @endif
+
 </body>
 </html>
