@@ -16,13 +16,14 @@ use App\Http\Controllers\Pengontrol;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/login',[Pengontrol::class,'login']);
-Route::get('/sign',[Pengontrol::class,'sign']);
+Route::get('/login',[Pengontrol::class,'login'])->middleware('guest');
+Route::get('/sign',[Pengontrol::class,'sign'])->middleware('guest');
 Route::get('/home',function (){
     return ('view dashboard');
 });
 
 
-Route::post('/login',[Pengontrol::class,'fn_login']);
-Route::post('/sign',[Pengontrol::class,'fn_sign']);
+
+Route::post('/login',[Pengontrol::class,'fn_login'])->middleware('guest');
+Route::post('/sign',[Pengontrol::class,'fn_sign'])->middleware('guest');
 
