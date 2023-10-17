@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class Pengontrol extends Controller
 {
@@ -14,13 +18,24 @@ class Pengontrol extends Controller
     }
 
     public function fn_login(Request $request){
-        return ($request->usrName);
+        $validate = $request->validate([
+            'name'=>'required',
+            'password'=>'required'
+        ]);
+
+        if(Auth::attempt($validate)){
+            $request->session()->regenerate();
+            return redirect()->intended('/home');
+        }else{
+            return back()->with('err','Login Tidak Valid');
+        }
     }
+
+    // Sign
 
     public function fn_sign(Request $request){
 
-
-        if ($request->usrPW !== $request->usrPW2){
+        if ($request->password!== $request->usrPW2){
             return view('auth.sign',[
                 'info' => true,
                 'usrName'=>$request->usrName,
@@ -28,11 +43,19 @@ class Pengontrol extends Controller
                 'infoType'=>'error'
             ]);
         }else{
-            return view('auth.login',[
-                'info'=> true,
-                'infoType'=>'message',
-                'infoMessage'=>'daftar berhasil , yuk login!'
+            $validate = $request->validate([
+                'name'=>'required|max:255|unique:users',
+                'email'=>'required|email|unique:users',
+                'password'=>'required'
             ]);
+
+            $validate['password'] = Hash::make($validate['password']);
+
+            User::create($validate);
+
+            $request->session()->flash('sucsess','daftar berhasil , masuk yuk!');
+
+            return redirect('/login');
         }
     }
 }

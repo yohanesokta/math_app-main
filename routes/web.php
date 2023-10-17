@@ -18,6 +18,9 @@ use App\Http\Controllers\Pengontrol;
 // });
 Route::get('/login',[Pengontrol::class,'login']);
 Route::get('/sign',[Pengontrol::class,'sign']);
+Route::get('/home',function (){
+    return ('view dashboard');
+});
 
 
 Route::post('/login',[Pengontrol::class,'fn_login']);

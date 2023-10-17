@@ -17,10 +17,10 @@
             <div class="container-form-login">
                 <form action="/login" method="POST">
                     @csrf
-                    <input type="text" name="usrName" placeholder="username" required >
-                    <label for="usrName"><i class="fa-solid fa-user"></i></label>
-                    <input type="password" name="usrPW" placeholder="password" required>
-                    <label for="usrName"><i class="fa-solid fa-lock"></i></label>
+                    <input type="text" name="name" placeholder="username" required >
+                    <label for="name"><i class="fa-solid fa-user"></i></label>
+                    <input type="password" name="password" placeholder="password" required>
+                    <label for="password"><i class="fa-solid fa-lock"></i></label>
                     <div class="container2">
                     <a href="/sign">Daftar sekarang</a>
                     </div>
@@ -31,9 +31,15 @@
             </div>
         </div>
     </div>
-    @if ($info ?? false)
-    <div class="info @if($infoType == 'message') infomessage @endif">
-        <p>{{ $infoMessage ?? 'error validation' }}</p>
+    @if (session()->has('err'))
+    <div class="info">
+        <p>{{ session('err') }}</p>
+     </div>
+    @endif
+
+    @if (session()->has('sucsess'))
+    <div class="info  infomessage ">
+        <p>{{session('sucsess')}}</p>
      </div>
     @endif
 </body>
