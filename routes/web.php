@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\materiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pengontrol;
 /*
@@ -18,12 +19,8 @@ use App\Http\Controllers\Pengontrol;
 // });
 Route::get('/login',[Pengontrol::class,'login'])->middleware('guest');
 Route::get('/sign',[Pengontrol::class,'sign'])->middleware('guest');
-Route::get('/home',function (){
-    return ('view dashboard');
-});
-
+Route::get('/home',[materiController::class,'homepage']);
 
 
 Route::post('/login',[Pengontrol::class,'fn_login'])->middleware('guest');
 Route::post('/sign',[Pengontrol::class,'fn_sign'])->middleware('guest');
-

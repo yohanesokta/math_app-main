@@ -21,11 +21,9 @@
     margin: auto;
     width: 80%;
     height: 330px;
-    box-shadow: 0 0 2px gray;
     border-radius: 8px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255,.6);
     position: relative;
+    background-color: rgba(255, 255, 255,.6);
 }
 .login-label{
     margin-top: 30px;
@@ -47,29 +45,28 @@
 }
 .container-form-login form input{
     width: 100%;
-    background-color: rgba(78, 46, 46, 0.3);
+    background-color: rgba(255, 255, 255,.3);
     border-radius: 5px;
     margin-left: -15px;
     border: none;
     border-bottom: 1px solid gray;
     outline: none;
-    color: white;
     height: 40px;
     margin-top: 20px;
     padding: 0 0 0 30px;
 }
 .container-form-login form input::placeholder{
-    color: rgb(255, 255, 255);
+    color: rgb(65, 65, 65);
 }
 .container-form-login form a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(56, 56, 56);
     font-size: 12px;
     margin-top: 10px;
     margin-left: -10px;
 }
 .container-form-login form label i{
-    color: rgb(255, 255, 255);
+    color: rgb(90, 90, 90);
     margin-top: -28px;
     margin-left: -5px;
     font-size: 12px;

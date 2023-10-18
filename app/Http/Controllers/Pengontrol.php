@@ -53,7 +53,7 @@ class Pengontrol extends Controller
 
             User::create($validate);
 
-            $request->session()->flash('sucsess','daftar berhasil , masuk yuk!');
+            $request->session()->flash('sucsess','daftar berhasil ,masuk yuk!');
 
             return redirect('/login');
         }
