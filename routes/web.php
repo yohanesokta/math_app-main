@@ -14,9 +14,10 @@ use App\Http\Controllers\Pengontrol;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/',function(){
+    return view('home');
+})->middleware('guest');
+
 Route::get('/login',[Pengontrol::class,'login'])->middleware('guest');
 Route::get('/sign',[Pengontrol::class,'sign'])->middleware('guest');
 Route::get('/home',[materiController::class,'homepage']);
