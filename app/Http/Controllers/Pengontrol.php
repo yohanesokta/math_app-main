@@ -53,9 +53,21 @@ class Pengontrol extends Controller
 
             User::create($validate);
 
-            $request->session()->flash('sucsess','daftar berhasil ,masuk yuk!');
+            $request->session()->flash('sucsess','pendaftaran berhasil');
 
             return redirect('/login');
         }
+    }
+
+    // logout function
+
+    public function logout(Request $request){
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

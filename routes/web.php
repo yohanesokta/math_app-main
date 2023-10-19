@@ -17,10 +17,12 @@ use App\Http\Controllers\Pengontrol;
 Route::get('/',function(){
     return view('home');
 })->middleware('guest');
+Route::get('/logout',[Pengontrol::class,'logout']);
 
-Route::get('/login',[Pengontrol::class,'login'])->middleware('guest');
+Route::get('/login',[Pengontrol::class,'login'])->middleware('guest')->name('login');
 Route::get('/sign',[Pengontrol::class,'sign'])->middleware('guest');
-Route::get('/home',[materiController::class,'homepage']);
+Route::get('/home',[materiController::class,'homepage'])->middleware('auth');
+Route::get('/home/video',[materiController::class,'video'])->middleware('auth');
 
 
 Route::post('/login',[Pengontrol::class,'fn_login'])->middleware('guest');

@@ -10,20 +10,11 @@
 </head>
 <body>
     <div class="container-materi">
-        <div class="materi-col">
-            <div class="icon-materi">
-                <div class="icon"></div>
-            </div>
-            <h1>Hey</h1>
+        <div class="video-col">
+            <iframe src="https://www.youtube.com/embed/GUV4D1hJKrA?autoplay=1" frameborder="0" width="100%" height="250px"></iframe>
+            <p class="video-caption">Video Materi</p>
             <div class="container">
-                <div class="sec2">
-                    <P>apa kamu pernah mendengar peluang kejadian ?</P>
-                </div>
-            </div>
-            <div class="container">
-                <div class="sec3">
-                    <P>Percobaan adalah suatu kegiatan yang menghasilkan nilai suatu peluang</P>
-                </div>
+                <p class="video-penjelasan">penjelasan dari materi peluang suatu kejadian</p>
             </div>
             <div class="container">
                 <div class="next-icon">
