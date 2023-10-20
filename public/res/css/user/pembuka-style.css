@@ -25,15 +25,13 @@ body{
     border-radius: 10px;
     background-color: white;
     margin: auto;
-    animation: materi-scale .5s;
+    animation: materi-scale 1s;
 }
 @keyframes materi-scale{
     from{
-        transform: scale(.9);
         opacity: 0;
     }
     to{
-        transform: scale(1);
         opacity: 1;
     }
 }
@@ -54,7 +52,7 @@ body{
 }
 @keyframes iconAnimate{
     from{
-        margin-top: -100px;
+        margin-top: -60px;
         transform: scale(1.2);
     }
     to{
@@ -168,4 +166,7 @@ body{
     color: white;
     margin-top: 20px;
     background-color: rgb(142, 54, 219);
+}
+.hidden{
+    display: none;
 }

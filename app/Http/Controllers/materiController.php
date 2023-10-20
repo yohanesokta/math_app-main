@@ -12,4 +12,7 @@ class materiController extends Controller
     public function video(){
         return view('users.video-materi');
     }
+    public function goQuiz(){
+        return view('users.goQuiz');
+    }
 }
