@@ -22,7 +22,7 @@
             </div>
             <div class="container">
                 <div class="sec3">
-                    <P>Percobaan adalah suatu kegiatan yang menghasilkan nilai suatu peluang</P>
+                    <P>Peluang atau Probabilatas itu ngka yang menunjukkan seberapa besar kemungkinan akan terjadi</P>
                 </div>
             </div>
             <div class="container">
@@ -40,20 +40,45 @@
             <div class="icon-materi">
                 <div class="icon"></div>
             </div>
-            <h1>-</h1>
+            <h1>Gimana tuh?</h1>
             <div class="container">
                 <div class="sec2">
-                    <P>Dan Apa itu Peluang?</P>
+                    <P>Contohnya sesimpel melempar dadu!</P>
                 </div>
             </div>
             <div class="container">
                 <div class="sec3">
-                    <P>Peluang adalah nilai (kuantitas) untuk menyatakan seberapa besar terjadinya suatu peristiwa</P>
+                    <P>apakah kamu bisa memastikan nilai mata dadu yang muncul setelah dilemparkan? Tentu tidak, ya</P>
                 </div>
             </div>
             <div class="container">
                 <div class="next-icon">
                     <a href="#!" onclick="goto('materi2','materi1')"><i class="fa-solid fa-circle-chevron-left"></i></a>
+                    <a href="#!" onclick="goto('materi2','materi3')"><i class="fa-solid fa-circle-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-materi hidden" id="materi3">
+        <div class="materi-col">
+            <div class="icon-materi">
+                <div class="icon"></div>
+            </div>
+            <h1>Jadi</h1>
+            <div class="container">
+                <div class="sec2">
+                    <P>apa kesimpulanya ?</P>
+                </div>
+            </div>
+            <div class="container">
+                <div class="sec3">
+                    <P>Tiga hal yang harus kamu ketahui untuk menentukan peluang, yaitu percobaan, ruang sampel, dan kejadian.</P>
+                </div>
+            </div>
+            <div class="container">
+                <div class="next-icon">
+                    <a href="#!" onclick="goto('materi3','materi2')"><i class="fa-solid fa-circle-chevron-left"></i></a>
                     <a href="/home/video"><i class="fa-solid fa-circle-chevron-right"></i></a>
                 </div>
             </div>
