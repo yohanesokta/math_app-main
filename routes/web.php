@@ -18,9 +18,11 @@ Route::get('/',function(){
     return view('home');
 })->middleware('guest');
 Route::get('/logout',[Pengontrol::class,'logout']);
-
 Route::get('/login',[Pengontrol::class,'login'])->middleware('guest')->name('login');
 Route::get('/sign',[Pengontrol::class,'sign'])->middleware('guest');
+Route::get('/auth/addtoken',[Pengontrol::class,'addToken'])->middleware('auth');
+Route::post('/auth/addtoken',[Pengontrol::class,'fn_token'])->middleware('auth');
+Route::get('/auth/publictoken',[Pengontrol::class,'fn_public_token'])->middleware('auth');
 
 Route::get('/home',[materiController::class,'homepage'])->middleware('auth');
 Route::get('/home/video',[materiController::class,'video'])->middleware('auth');

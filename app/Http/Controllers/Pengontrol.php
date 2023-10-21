@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class Pengontrol extends Controller
@@ -15,9 +15,35 @@ class Pengontrol extends Controller
     }
     public function sign(){
         return view('auth.sign');
+
+    }
+    public function addtoken(){
+
+            if(Auth::user()->guruTokens == null){
+                return view('auth.guruToken');
+            } else{
+                return redirect('/home');
+            }
+        
+    }
+    public function fn_public_token(){
+        DB::table('users')->where('name',Auth::user()->name)->update([
+            'guruTokens'=>'PUBLIC'
+        ]);
+        return redirect('/home');
     }
 
+    public function fn_token(Request $request){
+        DB::table('users')->where('name',Auth::user()->name)->update([
+            'guruTokens'=>$request->input('token')
+        ]);
+
+        return redirect('/home');
+    }
+
+
     public function fn_login(Request $request){
+
         $validate = $request->validate([
             'name'=>'required',
             'password'=>'required'
@@ -25,7 +51,14 @@ class Pengontrol extends Controller
 
         if(Auth::attempt($validate)){
             $request->session()->regenerate();
-            return redirect()->intended('/home');
+
+            if(Auth::user()->guruTokens == null){
+                return redirect()->intended('/auth/addtoken');
+            } else{
+                return redirect()->intended('/home');
+            }
+
+
         }else{
             return back()->with('err','Login Tidak Valid');
         }
