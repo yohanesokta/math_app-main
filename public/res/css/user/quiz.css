@@ -1,0 +1,42 @@
+.container-soal{
+    margin: auto;
+    width: 90%;
+    height: 75%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255,.4);
+}
+.isi-soal{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 40%;
+    margin-top: 10px;
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.isi-soal p{
+    margin: auto;
+    width: 80%;
+    font-weight: 600;
+    text-align: justify;
+}
+.isi-soal p span{
+    color: red;
+}
+.jwb{
+    display: flex;
+    margin-top: 20px;
+    width: 95%;
+    margin-left: 2.5%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+.jwb:hover{
+    background-color: rgb(55, 211, 50);
+    color: white;
+}
+.jwb p{
+    font-weight: 600;
+    margin: auto 20px;
+}
