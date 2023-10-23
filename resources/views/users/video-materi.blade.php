@@ -19,7 +19,7 @@
             <div class="container">
                 <div class="next-icon">
                     <a href="/home"><i class="fa-solid fa-circle-chevron-left"></i></a>
-                    <a href="/home/video"><i class="fa-solid fa-circle-chevron-right"></i></a>
+                    <a href="/home/goQuiz"><i class="fa-solid fa-circle-chevron-right"></i></a>
                 </div>
             </div>
         </div>

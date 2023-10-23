@@ -15,4 +15,7 @@ class materiController extends Controller
     public function goQuiz(){
         return view('users.goQuiz');
     }
+    public function quiz(){
+        return view('users.quiz');
+    }
 }
