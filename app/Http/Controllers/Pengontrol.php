@@ -87,7 +87,7 @@ class Pengontrol extends Controller
 
             $request->session()->flash('sucsess','pendaftaran berhasil');
 
-            return redirect('/login');
+            return redirect()->intended('/');
         }
     }
 

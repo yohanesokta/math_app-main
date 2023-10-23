@@ -22,7 +22,7 @@
             </div>
             <div class="container">
                 <div class="sec3">
-                    <P>Peluang atau Probabilatas itu ngka yang menunjukkan seberapa besar kemungkinan akan terjadi</P>
+                    <P>Peluang atau Probabilatas itu angka yang menunjukkan seberapa besar kemungkinan akan terjadi</P>
                 </div>
             </div>
             <div class="container">

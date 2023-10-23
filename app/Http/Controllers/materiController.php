@@ -18,4 +18,7 @@ class materiController extends Controller
     public function quiz(){
         return view('users.quiz');
     }
+    public function finish(){
+        return view('users.credits');
+    }
 }

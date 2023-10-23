@@ -29,6 +29,8 @@ Route::get('/home/goQuiz/first',[materiController::class,'quiz'])->middleware('a
 Route::get('/home',[materiController::class,'homepage'])->middleware('auth');
 Route::get('/home/video',[materiController::class,'video'])->middleware('auth');
 Route::get('/home/goQuiz',[materiController::class,'goQuiz'])->middleware('auth');
+Route::get('/home/finish',[materiController::class,'finish'])->middleware('auth');
+
 
 
 Route::post('/login',[Pengontrol::class,'fn_login'])->middleware('guest');
