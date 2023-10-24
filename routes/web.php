@@ -23,6 +23,10 @@ Route::get('/sign',[Pengontrol::class,'sign'])->middleware('guest');
 Route::get('/auth/addtoken',[Pengontrol::class,'addToken'])->middleware('auth');
 Route::post('/auth/addtoken',[Pengontrol::class,'fn_token'])->middleware('auth');
 Route::get('/auth/publictoken',[Pengontrol::class,'fn_public_token'])->middleware('auth');
+Route::get('/menu',function(){
+    return view('users.menu');
+});
+
 
 Route::get('/home/goQuiz/first',[materiController::class,'quiz'])->middleware('auth');
 
