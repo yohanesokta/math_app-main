@@ -15,15 +15,15 @@
             Pilihan
         </h1>
         <div class="container-menu">
-            <div class="menu">
+            <div class="menu" onclick="goTo('/home')">
                 <div class="isi-menu">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i class="fa-solid fa-graduation-cap yellow"></i>
                     <p>Materi</p>
                 </div>
             </div>
-            <div class="menu" >
+            <div class="menu" onclick="goTo('/home/goQuiz')">
                 <div class="isi-menu" style="width: 140px">
-                    <i class="fa-solid fa-clipboard-question"></i>
+                    <i class="fa-solid fa-clipboard-question green"></i>
                     <p>Quiz</p>
                 </div>
             </div>
@@ -34,5 +34,10 @@
             <i class="fa-solid fa-right-from-bracket"></i>
         </a>
     </div>
+    <script>
+        function goTo(url){
+            window.location.href = url
+        }
+    </script>
 </body>
 </html>

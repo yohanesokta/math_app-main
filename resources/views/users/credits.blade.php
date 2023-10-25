@@ -26,6 +26,11 @@
             <div class="name">
                 <a href="">M. Ryan Saputra</a>
             </div>
+            <div class="button-home-col">
+                <a href="/menu" class="button-home">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+            </div>
         </div>
 
 

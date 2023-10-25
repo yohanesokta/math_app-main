@@ -21,3 +21,17 @@
     font-weight: 600;
     margin: auto;
 }
+.button-home-col{
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+.button-home{
+    border-radius: 5px;
+    text-decoration: none;
+    margin: auto;
+    color: white;
+    padding: 10px 30px;
+    background-color: green;
+}
