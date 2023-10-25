@@ -17,7 +17,7 @@ Math APP adalah solusi lengkap untuk kebutuhan pembelajaran matematika kelas 12.
 
 🔴 Peringatan : (Not Responsif Web) Buka dalam mode mobile !!
 
-### Listen ON : <a href="pintarmenghitung.nichesite.or" targer="_blank">Here</a>
+### Download ON : [On Here](https://github.com/yohanesokta/math_app-main/releases/tag/1.2)
     pintarmenghitung.nichesite.org
 
 ## Preview
