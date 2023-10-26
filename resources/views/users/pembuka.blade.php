@@ -68,7 +68,7 @@
             <h1>Jadi</h1>
             <div class="container">
                 <div class="sec2">
-                    <P>apa kesimpulanya ?</P>
+                    <P>kalian sudah paham ?</P>
                 </div>
             </div>
             <div class="container">
