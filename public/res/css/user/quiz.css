@@ -1,0 +1,88 @@
+.container-soal{
+    margin: auto;
+    width: 90%;
+    height: 75%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255,.4);
+}
+.isi-soal{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 40%;
+    margin-top: 10px;
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.isi-soal p{
+    margin: auto;
+    width: 80%;
+    font-weight: 600;
+    text-align: justify;
+}
+.isi-soal p span{
+    color: red;
+}
+.jwb{
+    display: flex;
+    margin-top: 20px;
+    width: 95%;
+    margin-left: 2.5%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+.sel-green{
+    background-color: rgb(55, 211, 50);
+    color: white;
+    transition: 0.2s ease;
+}
+.sel-red{
+    background-color: rgb(255, 51, 0);
+    color: white;
+    transition: 0.2s ease;
+}
+.jwb p{
+    font-weight: 600;
+    margin: auto 20px;
+}
+.container-score {
+    padding: 20px 0;
+    border-radius: 10px;
+    margin: auto;
+    background-color: white;
+    width: 80%;
+
+}
+.container-score p{
+    text-align: center;
+    font-weight: 700;
+}
+.score{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+}
+.score p{
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(135, 16, 255);
+    color: white;
+    font-weight: 800;
+}
+.btn-finish{
+    padding: 8px 15px;
+    background-color: rgb(96, 65, 124);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+    margin: auto;
+    border-radius: 5px;
+}
+.btn-finish:hover{
+    background-color: rgb(163, 92, 224);
+
+}

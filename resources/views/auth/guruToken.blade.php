@@ -43,14 +43,14 @@ form input{
             </div>
             <div class="container-form-login">
                 <form action="/auth/addtoken" method="POST">
-                    <p class="tokens-p"><i class="fa-solid fa-circle-exclamation icon-token-p"></i>Pakai token yang diberikan guru kalian atau pakai secara public</p>
                     @csrf
+                    <p class="tokens-p"><i class="fa-solid fa-circle-exclamation icon-token-p"></i>Pakai token yang diberikan guru kalian atau pakai secara public</p>
                     <input type="text" name="token" placeholder="masukkan token" required oninput="this.value = this.value.toUpperCase()">
                     <label for="name"><i class="fa-solid fa-lock"></i></label>
                     <div class="container2">
                         <button type="submit">Gunakan Token</button>
                     </div>
-                <button onclick="window.location.href='/auth/publictoken'">Pakai Secara Public</button>
+                <button id="buttonPublic">Pakai Secara Public</button>
                 </form>
             </div>
         </div>
@@ -73,6 +73,14 @@ form input{
         </div>
      @enderror
 
+        <script>
+            const btnPublic = document.getElementById('buttonPublic');
+            btnPublic.addEventListener("click", public_func);
 
+            function public_func(event){
+                event.preventDefault();
+                window.location.href='/auth/publictoken';
+            }
+        </script>
 </body>
 </html>

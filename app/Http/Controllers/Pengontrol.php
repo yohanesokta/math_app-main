@@ -24,7 +24,7 @@ class Pengontrol extends Controller
             } else{
                 return redirect('/home');
             }
-        
+
     }
     public function fn_public_token(){
         DB::table('users')->where('name',Auth::user()->name)->update([
@@ -37,7 +37,6 @@ class Pengontrol extends Controller
         DB::table('users')->where('name',Auth::user()->name)->update([
             'guruTokens'=>$request->input('token')
         ]);
-
         return redirect('/home');
     }
 
@@ -88,7 +87,7 @@ class Pengontrol extends Controller
 
             $request->session()->flash('sucsess','pendaftaran berhasil');
 
-            return redirect('/login');
+            return redirect()->intended('/');
         }
     }
 
