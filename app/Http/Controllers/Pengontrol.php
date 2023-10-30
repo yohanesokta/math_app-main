@@ -87,7 +87,7 @@ class Pengontrol extends Controller
 
             $request->session()->flash('sucsess','pendaftaran berhasil');
 
-            return redirect()->intended('/');
+            return redirect()->intended('/login');
         }
     }
 
@@ -101,5 +101,50 @@ class Pengontrol extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+    // Admin login Control
+
+    public function adminLogin(){
+        return view('auth.login-admin');
+    }
+    public function processAdminLogin(Request $request){
+        $validate = $request->validate([
+            "name" => "required",
+            "password" => "required"
+        ]);
+
+        $validate['akses'] = 'guru';
+
+        if(Auth::attempt($validate)){
+            $request->session()->regenerate();
+            return redirect()->intended('/admin/menu');
+        }else{
+            return back()->with('err','Loh Kok Salah?');
+        }
+
+    }
+
+    // Menu Control Admin
+
+    public function adminMenuControl(){
+        $guruToken = Auth::user()->guruTokens;
+        $data = DB::table('users')->where("guruTokens",$guruToken)->where("akses","!=","guru")->get();
+        $AllData = DB::table('users')->where("akses","!=","guru")->where("guruTokens","!=",$guruToken)->get();
+
+        return view('admin.dashboard',[
+            "self" => Auth::user(),
+            "siswa" => $data,
+            "public" => $AllData
+        ]);
+
+    }
+
+    public function score(Request $request){
+        $value = $request->input('score');
+        DB::table('users')->where('id',Auth::user()->id)->update([
+            "score"=> $value
+        ]);
+        return redirect('/home/finish');
     }
 }

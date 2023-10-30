@@ -25,11 +25,15 @@ Route::post('/auth/addtoken',[Pengontrol::class,'fn_token'])->middleware('auth')
 Route::get('/auth/publictoken',[Pengontrol::class,'fn_public_token'])->middleware('auth');
 Route::get('/menu',function(){
     return view('users.menu');
-});
+})->middleware('auth');
 
+Route::get('/admin/menu',[Pengontrol::class,'adminMenuControl'])->middleware('auth');
+
+Route::get('/admin/login',[Pengontrol::class,'adminLogin']);
+Route::post('/admin/login',[Pengontrol::class,'processAdminLogin']);
 
 Route::get('/home/goQuiz/first',[materiController::class,'quiz'])->middleware('auth');
-
+Route::get('/Score',[Pengontrol::class,'score'])->middleware('auth');
 Route::get('/home',[materiController::class,'homepage'])->middleware('auth');
 Route::get('/home/video',[materiController::class,'video'])->middleware('auth');
 Route::get('/home/goQuiz',[materiController::class,'goQuiz'])->middleware('auth');

@@ -59,10 +59,11 @@
         <div class="container-score hidden" id="finishCol">
             <p>Quiz Selesai, Dan Score Mu</p>
             <div class="score">
-                <p id='scoreNum'>50</p>
+                <p id='scoreNum'>0</p>
             </div>
-            <div class="container">
-                <a href="/home/finish" class="btn-finish">Finish</a>
+            <form method="GET" action="/Score"  class="container">
+                <input type="hidden" value="0" name="score" id="next">
+                <button type="submit"class="btn-finish">Finish</a>
             </div>
         </div>
 

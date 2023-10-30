@@ -16,17 +16,18 @@
         <h2>PINTAR MENGHITUNG</h2>
         <p>Peluang Suatu Kejadian</p>
     </div>
-
-    <div class="login-container">
-        <div class="btn-login-container">
-            <div class="btn-login">
-                <p onclick="window.location.href = '/login'">Login Sekarang</p>
-            </div>
-            <div class="btn-login">
-                <p onclick="window.location.href = '/sign'">Daftar Akun</p>
-            </div>
-            <div class="btn-login">
-                <p onclick="window.location.href = '/sign'"><i class="fa-solid fa-circle-exclamation"></i> Masuk Untuk Admin</p>
+    <div class="container-full-login">
+        <div class="login-container">
+            <div class="btn-login-container">
+                <div class="btn-login">
+                    <p onclick="window.location.href = '/login'">Login Sekarang</p>
+                </div>
+                <div class="btn-login">
+                    <p onclick="window.location.href = '/sign'">Daftar Akun</p>
+                </div>
+                <div class="btn-login">
+                    <p onclick="window.location.href = '/admin/login'"> Masuk Untuk Admin</p>
+                </div>
             </div>
         </div>
     </div>

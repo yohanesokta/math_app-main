@@ -81,6 +81,8 @@
     transition: .2s;
     margin: auto;
     border-radius: 5px;
+    border: none;
+    outline: none;
 }
 .btn-finish:hover{
     background-color: rgb(163, 92, 224);

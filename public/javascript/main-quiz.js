@@ -12,6 +12,7 @@ function Answer(SelfSoalID,selfID,nextID,score){
         }
         document.getElementById(SelfSoalID).classList.add('hidden');
         document.getElementById(nextID).classList.remove('hidden');
+        document.getElementById('next').value = Score;
         document.getElementById('scoreNum').innerHTML = Score;
     },1000)
 }
