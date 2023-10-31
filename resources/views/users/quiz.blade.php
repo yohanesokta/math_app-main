@@ -41,16 +41,37 @@
                 <p>Terdapat enam angka <span>1, 3, 4, 5, 7, 8 </span>yang akan disusun menjadi bilangan yang terdiri dari 3 angka. Banyak bilangan ganjil yang dapat disusun dari angka-angka tersebut adalah</p>
             </div>
             <div class="isi-jawaban">
-                <div class="jwb" id="jwb5" onclick="Answer('soal02','jwb5','finishCol',1)">
+                <div class="jwb" id="jwb5" onclick="Answer('soal02','jwb5','soal03',1)">
                     <p>A. 144</p>
                 </div>
-                <div class="jwb" id="jwb6" onclick="Answer('soal02','jwb6','finishCol',0)">
+                <div class="jwb" id="jwb6" onclick="Answer('soal02','jwb6','soal03',0)">
                     <p>B. 3360</p>
                 </div>
-                <div class="jwb" id="jwb7" onclick="Answer('soal02','jwb7','finishCol',0)">
+                <div class="jwb" id="jwb7" onclick="Answer('soal02','jwb7','soal03',0)">
                     <p>C. 80</p>
                 </div>
-                <div class="jwb" id="jwb8" onclick="Answer('soal02','jwb8','finishCol',0)">
+                <div class="jwb" id="jwb8" onclick="Answer('soal02','jwb8','soal03',0)">
+                    <p>D. 440</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-soal hidden" id="soal03">
+            <div class="isi-soal">
+                <p>Terdapat enam angka <span>SOal 3</span>yang akan disusun menjadi bilangan yang terdiri dari 3 angka. Banyak bilangan ganjil yang dapat disusun dari angka-angka tersebut adalah</p>
+            </div>
+            <div class="isi-jawaban">
+                <div class="jwb" id="jwb9" onclick="Answer('soal02','jwb9','finishCol',1)">
+                    <p>A. 144</p>
+                </div>
+                <div class="jwb" id="jwb10" onclick="Answer('soal02','jwb10','finishCol',0)">
+                    <p>B. 3360</p>
+                </div>
+                <div class="jwb" id="jwb11" onclick="Answer('soal02','jwb11','finishCol',0)">
+                    <p>C. 80</p>
+                </div>
+                <div class="jwb" id="jwb12" onclick="Answer('soal02','jwb12','finishCol',0)">
                     <p>D. 440</p>
                 </div>
             </div>
