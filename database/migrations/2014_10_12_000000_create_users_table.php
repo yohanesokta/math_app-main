@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('guruTokens')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 
