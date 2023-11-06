@@ -14,8 +14,30 @@
 
 
 
+    @foreach ($Quest as $quest)
+        @dd($quest->soal)
+         <div class="container-soal" id="soal01">
+            <div class="isi-soal">
+                <p>Yohanes memiliki <span></span> , jika yohanes ingin memakai lengkap pasangan sepasang sepatu 1 celana dan 1 baju , pasangan berbeda yang yohanes punya adalah</p>
+            </div>
+            <div class="isi-jawaban">
+                <div class="jwb" id="jwb1" onclick="Answer('soal01','jwb1','soal02',0)">
+                    <p>1. 20</p>
+                </div>
+                <div class="jwb" id="jwb2" onclick="Answer('soal01','jwb2','soal02',1)">
+                    <p>2. 30</p>
+                </div>
+                <div class="jwb" id="jwb3" onclick="Answer('soal01','jwb3','soal02',0)">
+                    <p>3. 35</p>
+                </div>
+                <div class="jwb" id="jwb4" onclick="Answer('soal01','jwb4','soal02',0)">
+                    <p>4. 10</p>
+                </div>
+            </div>
+        </div>
+    @endforeach
 
-        <div class="container-soal " id="soal01">
+        {{-- <div class="container-soal " id="soal01">
             <div class="isi-soal">
                 <p>Yohanes memiliki <span>2 sepatu 3 baju dan 5 celana</span> , jika yohanes ingin memakai lengkap pasangan sepasang sepatu 1 celana dan 1 baju , pasangan berbeda yang yohanes punya adalah</p>
             </div>
@@ -33,8 +55,11 @@
                     <p>4. 10</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
+
+
+        <!--
 
         <div class="container-soal hidden" id="soal02">
             <div class="isi-soal">
@@ -62,20 +87,20 @@
                 <p>Terdapat enam angka <span>SOal 3</span>yang akan disusun menjadi bilangan yang terdiri dari 3 angka. Banyak bilangan ganjil yang dapat disusun dari angka-angka tersebut adalah</p>
             </div>
             <div class="isi-jawaban">
-                <div class="jwb" id="jwb9" onclick="Answer('soal02','jwb9','finishCol',1)">
+                <div class="jwb" id="jwb9" onclick="Answer('soal03','jwb9','finishCol',1)">
                     <p>A. 144</p>
                 </div>
-                <div class="jwb" id="jwb10" onclick="Answer('soal02','jwb10','finishCol',0)">
+                <div class="jwb" id="jwb10" onclick="Answer('soal03','jwb10','finishCol',0)">
                     <p>B. 3360</p>
                 </div>
-                <div class="jwb" id="jwb11" onclick="Answer('soal02','jwb11','finishCol',0)">
+                <div class="jwb" id="jwb11" onclick="Answer('soal03','jwb11','finishCol',0)">
                     <p>C. 80</p>
                 </div>
-                <div class="jwb" id="jwb12" onclick="Answer('soal02','jwb12','finishCol',0)">
+                <div class="jwb" id="jwb12" onclick="Answer('soal03','jwb12','finishCol',0)">
                     <p>D. 440</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="container-score hidden" id="finishCol">
             <p>Quiz Selesai, Dan Score Mu</p>
