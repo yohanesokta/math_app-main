@@ -45,5 +45,5 @@ Route::post('/login', [Pengontrol::class, 'fn_login'])->middleware('guest');
 Route::post('/sign', [Pengontrol::class, 'fn_sign'])->middleware('guest');
 
 Route::get('/test/home', function () {
-    return view('src.public.homeSoal');
+    return view('src.public.Soal');
 });

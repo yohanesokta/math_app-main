@@ -38,6 +38,10 @@
             color: white;
             text-decoration: none;
         }
+
+        .test {
+            border: 1px solid red;
+        }
     </style>
     @yield('import')
 </head>

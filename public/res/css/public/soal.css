@@ -1,0 +1,34 @@
+body{
+    background-color: #FABE9F;
+}
+.col-all-item{
+    width: 100%;
+    display: flex;   
+}
+.image-source{
+    margin: 0 auto;
+    width: 85%;
+    margin-top: 20px;
+    padding: 8px;
+    padding-bottom: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.col-all-item img{
+    width: 100%;    
+    border-radius: 15px;
+}
+.text-field{
+    background-color: white;
+    width: 85%;
+    padding: 8px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    margin: 30px auto;
+}
+.text-field p{
+    font-family: 'Poppins';
+    font-weight: 500;
+    margin: 10px;
+    text-align: justify;
+}
