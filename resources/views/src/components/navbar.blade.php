@@ -51,9 +51,9 @@
 
     <nav>
         <div class="col-nav">
-            <a href="#"><i class="fa-solid fa-house"></i></a>
-            <a href="#"><i class="fa-solid fa-bars"></i></a>
-            <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="/auth/removetoken"><i class="fa-solid fa-house"></i></a>
+            <a href="/public/home"><i class="fa-solid fa-bars"></i></a>
+            <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
     </nav>
 </body>

@@ -42,7 +42,7 @@ form input{
                 <p>Token Guru</p>
             </div>
             <div class="container-form-login">
-                <form action="/auth/addtoken" method="POST">
+                <form action="/auth/token/validation" method="POST">
                     @csrf
                     <p class="tokens-p"><i class="fa-solid fa-circle-exclamation icon-token-p"></i>Pakai token yang diberikan guru kalian atau pakai secara public</p>
                     <input type="text" name="token" placeholder="masukkan token" required oninput="this.value = this.value.toUpperCase()">
@@ -50,7 +50,6 @@ form input{
                     <div class="container2">
                         <button type="submit">Gunakan Token</button>
                     </div>
-                <button id="buttonPublic">Pakai Secara Public</button>
                 </form>
             </div>
         </div>
@@ -72,6 +71,11 @@ form input{
             <p>username digunakan</p>
         </div>
      @enderror
+     @if (session()->has('err'))
+        <div class="info">
+            <p>{{session('err')}}</p>
+        </div>
+    @endif
 
         <script>
             const btnPublic = document.getElementById('buttonPublic');

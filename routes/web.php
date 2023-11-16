@@ -3,6 +3,7 @@
 use App\Http\Controllers\materiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pengontrol;
+use App\Http\Controllers\SoalController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,6 +45,7 @@ Route::get('/home/finish', [materiController::class, 'finish'])->middleware('aut
 Route::post('/login', [Pengontrol::class, 'fn_login'])->middleware('guest');
 Route::post('/sign', [Pengontrol::class, 'fn_sign'])->middleware('guest');
 
-Route::get('/test/home', function () {
-    return view('src.public.Soal');
-});
+Route::get('/public/home', [SoalController::class,'home_soal'])->middleware('auth');
+Route::get('/public/materi',[SoalController::class,'home_materi'])->middleware('auth');
+Route::post('/auth/token/validation',[SoalController::class,'token_validation'])->middleware('auth');
+Route::get('/auth/removetoken',[SoalController::class,'remove_token'])->middleware('auth');

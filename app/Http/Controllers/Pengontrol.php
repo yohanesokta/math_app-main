@@ -22,7 +22,7 @@ class Pengontrol extends Controller
             if(Auth::user()->guruTokens == null){
                 return view('auth.guruToken');
             } else{
-                return redirect('/home');
+                return redirect('/public/home');
             }
 
     }
@@ -30,14 +30,14 @@ class Pengontrol extends Controller
         DB::table('users')->where('name',Auth::user()->name)->update([
             'guruTokens'=>'PUBLIC'
         ]);
-        return redirect('/home');
+        return redirect('/public/home');
     }
 
     public function fn_token(Request $request){
         DB::table('users')->where('name',Auth::user()->name)->update([
             'guruTokens'=>$request->input('token')
         ]);
-        return redirect('/home');
+        return redirect('/public/home');
     }
 
 
@@ -54,7 +54,7 @@ class Pengontrol extends Controller
             if(Auth::user()->guruTokens == null){
                 return redirect()->intended('/auth/addtoken');
             } else{
-                return redirect()->intended('/home');
+                return redirect()->intended('/public/home');
             }
 
 
