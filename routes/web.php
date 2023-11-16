@@ -45,7 +45,8 @@ Route::get('/home/finish', [materiController::class, 'finish'])->middleware('aut
 Route::post('/login', [Pengontrol::class, 'fn_login'])->middleware('guest');
 Route::post('/sign', [Pengontrol::class, 'fn_sign'])->middleware('guest');
 
-Route::get('/public/home', [SoalController::class,'home_soal'])->middleware('auth');
-Route::get('/public/materi',[SoalController::class,'home_materi'])->middleware('auth');
-Route::post('/auth/token/validation',[SoalController::class,'token_validation'])->middleware('auth');
-Route::get('/auth/removetoken',[SoalController::class,'remove_token'])->middleware('auth');
+Route::get('/public/home', [SoalController::class, 'home_soal'])->middleware('auth');
+Route::get('/public/materi', [SoalController::class, 'home_materi'])->middleware('auth');
+Route::post('/auth/token/validation', [SoalController::class, 'token_validation'])->middleware('auth');
+Route::get('/auth/removetoken', [SoalController::class, 'remove_token'])->middleware('auth');
+Route::get('/public/soal', [SoalController::class, 'penilaian'])->middleware('auth');
